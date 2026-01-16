@@ -43,8 +43,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Update package version
+        working-directory: ./npm
+        env:
+          TAG_VERSION: ${{ github.ref_name }}
+        run: |
+          VERSION=${TAG_VERSION#v}
+          npm version $VERSION --no-git-tag-version
 
       - name: Publish to npm
         working-directory: ./npm
