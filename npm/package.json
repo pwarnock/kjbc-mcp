@@ -1,0 +1,35 @@
+{
+  "name": "@pwarnock/kjbc-mcp",
+  "version": "0.1.0",
+  "description": "Strong's Concordance MCP server - Greek/Hebrew word lookups for AI assistants",
+  "bin": {
+    "kjbc-mcp": "./bin/kjbc-mcp.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwarnock/kjbc-mcp"
+  },
+  "author": "pwarnock",
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bible",
+    "strongs",
+    "concordance",
+    "greek",
+    "hebrew",
+    "ai"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "bin/",
+    "scripts/",
+    "README.md"
+  ]
+}

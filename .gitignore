@@ -1,6 +1,13 @@
 .DS_Store
 /bin/
 /dist/
+/kjbc-mcp
 *.exe
 *.out
 *.test
+
+# npm
+node_modules/
+npm/bin/kjbc-mcp
+npm/bin/kjbc-mcp.exe
+*.tgz

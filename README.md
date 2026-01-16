@@ -1,48 +1,95 @@
 # kjbc-mcp
 
-A minimal Model Context Protocol (MCP) server for the King James Bible Concordance (KJBC). It exposes a small, read-only tool surface over stdio and relies on the upstream `kjbc` library for data and lookups.
+[![npm](https://img.shields.io/npm/v/@pwarnock/kjbc-mcp)](https://www.npmjs.com/package/@pwarnock/kjbc-mcp)
+[![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 
-## Quick start
+Strong's Concordance MCP server. Provides grounded Greek/Hebrew word lookups for AI assistants.
 
-1) Install the binary (recommended)
-- Download a release from `https://github.com/pwarnock/kjbc-mcp/releases` and place it on your PATH.
+## Quick Start
 
-2) Configure your MCP host (example: Claude Desktop)
+### Any MCP-compatible agent
+
+Add to your MCP configuration:
 
 ```json
 {
   "mcpServers": {
     "kjbc": {
-      "command": "kjbc-mcp",
-      "args": []
+      "command": "npx",
+      "args": ["-y", "@pwarnock/kjbc-mcp"]
     }
   }
 }
 ```
 
-## Build from source
+### Claude Code
+
+Install the plugin:
+
+```
+/plugin marketplace add pwarnock/pwarnock-cc-plugins
+/plugin install kjbc
+```
+
+### Claude Desktop
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "kjbc": {
+      "command": "npx",
+      "args": ["-y", "@pwarnock/kjbc-mcp"]
+    }
+  }
+}
+```
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `word` | Find Strong's numbers for an English word |
+| `entry` | Get definition for a Strong's number |
+| `langs` | List supported languages (Greek, Hebrew) |
+
+### word
+
+Find Strong's entries for an English word.
+
+```
+word: "love", language: "greek"
+→ G25, G26, G5360, G5361, G5362, G5363
+```
+
+### entry
+
+Get the full definition for a Strong's number.
+
+```
+entry_number: "G26", language: "greek"
+→ agape (ag-ah'-pay): love, affection, benevolence
+```
+
+## Alternative Installation
+
+### Go developers
 
 ```bash
 go install github.com/pwarnock/kjbc-mcp/cmd/kjbc-mcp@latest
 ```
 
-Note: this requires Go 1.24+ because the upstream `kjbc` module declares Go 1.24.
+### Manual binary
 
-## Tools
-
-- `word`: Find Strong's entries for an English word.
-  - Inputs: `word` (string), `language` (greek|hebrew, default greek), `show_verses` (bool, default false)
-- `entry`: Get details for a Strong's entry number.
-  - Inputs: `entry_number` (string), `language` (greek|hebrew, default greek)
-- `langs`: List supported languages.
+Download from [releases](https://github.com/pwarnock/kjbc-mcp/releases).
 
 ## Attribution
 
-This MCP server is a thin wrapper around the original `kjbc` tool by @jrswab:
-- Source: `https://github.com/jrswab/kjbc`
+Wraps the [kjbc](https://github.com/jrswab/kjbc) library by [@jrswab](https://github.com/jrswab).
 
-Strong's Concordance data is public domain and sourced via `kjbc` (see that repository for full attribution).
+Strong's Concordance data is public domain.
 
 ## License
 
-GPL-3.0. See `LICENSE`.
+GPL-3.0

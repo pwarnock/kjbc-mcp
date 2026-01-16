@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kjbc": {
+      "command": "npx",
+      "args": ["-y", "@pwarnock/kjbc-mcp"]
+    }
+  }
+}

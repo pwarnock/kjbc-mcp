@@ -1,0 +1,9 @@
+{
+  "name": "kjbc",
+  "version": "0.1.0",
+  "description": "Strong's Concordance MCP - Grounded Greek/Hebrew word lookups for AI",
+  "author": "pwarnock",
+  "license": "GPL-3.0",
+  "repository": "https://github.com/pwarnock/kjbc-mcp",
+  "keywords": ["bible", "greek", "hebrew", "strongs", "concordance", "theology"]
+}
