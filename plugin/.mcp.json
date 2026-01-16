@@ -2,7 +2,7 @@
   "mcpServers": {
     "kjbc": {
       "command": "npx",
-      "args": ["-y", "@pwarnock/kjbc-mcp"]
+      "args": ["-y", "@pwarnock/kjbc-mcp@latest"]
     }
   }
 }
