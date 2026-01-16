@@ -1,10 +1,16 @@
+---
+name: Strong's Concordance Lookup
+description: Use this skill when the user asks about biblical Greek or Hebrew words, Strong's numbers, original language meanings, word etymology in Scripture, or concordance lookups
+version: 1.0.0
+---
+
 # Strong's Concordance Lookup
 
 You have access to Strong's Concordance via the KJBC MCP server. Use these tools to provide grounded biblical language information.
 
 ## Available Tools
 
-### `word` - Search by English word
+### `mcp__kjbc__word` - Search by English word
 Find Strong's numbers for any English word in the KJV.
 
 **Parameters:**
@@ -12,18 +18,18 @@ Find Strong's numbers for any English word in the KJV.
 - `language`: "greek" (default) or "hebrew"
 - `show_verses`: Include verse references (default: false)
 
-**Example:** To find Greek words for "love", call `word` with `{"word": "love", "language": "greek"}`
+**Example:** To find Greek words for "love", call `mcp__kjbc__word` with `{"word": "love", "language": "greek"}`
 
-### `entry` - Get Strong's definition
+### `mcp__kjbc__entry` - Get Strong's definition
 Look up the full definition for a Strong's number.
 
 **Parameters:**
 - `entry_number` (required): Strong's number (e.g., "G26", "H7965")
 - `language`: "greek" (default) or "hebrew"
 
-**Example:** To get the definition of agape, call `entry` with `{"entry_number": "G26", "language": "greek"}`
+**Example:** To get the definition of agape, call `mcp__kjbc__entry` with `{"entry_number": "G26", "language": "greek"}`
 
-### `langs` - List languages
+### `mcp__kjbc__langs` - List languages
 Returns available languages (Greek, Hebrew).
 
 ## When to Use

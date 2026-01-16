@@ -1,3 +1,8 @@
+---
+name: strongs
+description: Get the definition for a Strong's number (e.g., G26 or H430)
+---
+
 # Look Up Strong's Number
 
 You are helping the user get the definition for a specific Strong's Concordance number.

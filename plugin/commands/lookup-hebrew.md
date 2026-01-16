@@ -1,3 +1,8 @@
+---
+name: lookup-hebrew
+description: Look up a Hebrew word in Strong's Concordance
+---
+
 # Look Up Hebrew Word
 
 You are helping the user look up a Hebrew word in Strong's Concordance.
@@ -8,7 +13,7 @@ You are helping the user look up a Hebrew word in Strong's Concordance.
    - Set `word` parameter to the word the user provided (or ask if not provided)
    - Set `language` parameter to "hebrew"
 
-2. The tool will return Strong's numbers (e.g., H430, H1961) that match the word
+2. The tool will return Strong's numbers (e.g., H430, H7965) that match the word
 
 3. For each Strong's number returned:
    - Use the `mcp__kjbc__entry` tool to get the full definition
@@ -24,18 +29,15 @@ You are helping the user look up a Hebrew word in Strong's Concordance.
 
 ## Example Interaction
 
-User: `/lookup-hebrew god`
+User: `/lookup-hebrew peace`
 
 You should:
-1. Search for "god" in Hebrew
+1. Search for "peace" in Hebrew
 2. Get definitions for all returned Strong's numbers
 3. Display results like:
 
-**H430 - elohim** (el-o-heem')
-God, gods, judges, angels...
-
-**H410 - el** (ale)
-God, god, power, mighty one...
+**H7965 - shalom** (shaw-lome')
+Peace, completeness, soundness, welfare, safety...
 
 (continue for all matches)
 

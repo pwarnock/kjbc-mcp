@@ -1,3 +1,8 @@
+---
+name: lookup-greek
+description: Look up a Greek word in Strong's Concordance
+---
+
 # Look Up Greek Word
 
 You are helping the user look up a Greek word in Strong's Concordance.
