@@ -31,6 +31,17 @@ Install the plugin:
 /plugin install kjbc
 ```
 
+Optional: Install the skill for convenient lookup commands:
+
+```
+/skill install pwarnock/kjbc-mcp
+```
+
+Then use commands like:
+- `/lookup-greek love` - Search for Greek words
+- `/lookup-hebrew god` - Search for Hebrew words
+- `/strongs G26` - Get definition for a Strong's number
+
 ### Claude Desktop
 
 Add to `claude_desktop_config.json`:
