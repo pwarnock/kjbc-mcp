@@ -1,6 +1,6 @@
 {
   "name": "@pwarnock/kjbc-mcp",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Strong's Concordance MCP server - Greek/Hebrew word lookups for AI assistants",
   "bin": {
     "kjbc-mcp": "bin/kjbc-mcp.js"
